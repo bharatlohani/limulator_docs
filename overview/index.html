@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#limulator" class="md-skip">
           Skip to content
         </a>
       
@@ -300,43 +300,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scene-generation-with-blender" class="md-nav__link">
-    Scene Generation with Blender
+  <a href="#why-limulator" class="md-nav__link">
+    Why Limulator?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#platforms" class="md-nav__link">
-    Platforms
+  <a href="#limulator-components" class="md-nav__link">
+    Limulator Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Limulator Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terrain-module" class="md-nav__link">
+    Terrain module
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sensors" class="md-nav__link">
-    Sensors
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-module" class="md-nav__link">
+    Trajectory Module
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#cameras" class="md-nav__link">
-    Cameras
+        
+          <li class="md-nav__item">
+  <a href="#simulator-platform-setup" class="md-nav__link">
+    Simulator / Platform setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#platform-module" class="md-nav__link">
+    Platform Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-camera-module" class="md-nav__link">
+    Sensor &amp; Camera Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limulate" class="md-nav__link">
     Limulate!
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#test-platform" class="md-nav__link">
-    Test Platform
+  <a href="#limulator-ui" class="md-nav__link">
+    Limulator UI
   </a>
   
 </li>
@@ -586,43 +613,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scene-generation-with-blender" class="md-nav__link">
-    Scene Generation with Blender
+  <a href="#why-limulator" class="md-nav__link">
+    Why Limulator?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#platforms" class="md-nav__link">
-    Platforms
+  <a href="#limulator-components" class="md-nav__link">
+    Limulator Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Limulator Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terrain-module" class="md-nav__link">
+    Terrain module
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sensors" class="md-nav__link">
-    Sensors
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-module" class="md-nav__link">
+    Trajectory Module
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#cameras" class="md-nav__link">
-    Cameras
+        
+          <li class="md-nav__item">
+  <a href="#simulator-platform-setup" class="md-nav__link">
+    Simulator / Platform setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#platform-module" class="md-nav__link">
+    Platform Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-camera-module" class="md-nav__link">
+    Sensor &amp; Camera Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limulate" class="md-nav__link">
     Limulate!
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#test-platform" class="md-nav__link">
-    Test Platform
+  <a href="#limulator-ui" class="md-nav__link">
+    Limulator UI
   </a>
   
 </li>
@@ -642,25 +696,47 @@
                   
 
 
-<h1 id="overview">Overview</h1>
-<h2 id="scene-generation-with-blender">Scene Generation with Blender</h2>
-<pre><code>Not yet ready.
+<h1 id="limulator">Limulator</h1>
+<p>Lidar technology has been widely used to build 3D surface models. It can use several sensors available to generate user-required data,  needless to say, it is both time-consuming and expensive. </p>
+<p>Limulator is a wake of a new technology tool that builds realistic 3D surface models by simulation. Limulator stands for the combination of the words “LiDAR” and “simulator” thus becoming Limulator. Limulator has been developed as a generic solution for numerous simulation tasks, including autonomous driving systems, airborne altimetry, and others.
+This software combines the models or mathematical equations to replicate the process of  LiDAR data generation. Majorly it works on three components: 3D model component, laser component, and LiDAR data generation.</p>
+<h2 id="why-limulator">Why Limulator?</h2>
+<p>The autonomous vehicle (AV) industry is just spreading its roots to reach the potential height of automation and self-driving vehicles. But it all comes down to the robust training of DL models and data generation.
+Some of the challenges faced are - 
+   - A large amount of training data is required to train a deep network.
+   - Imbalanced data leads to biases in the model in the training phase.
+ - Capturing all possible scenarios in the real world and training the AV model on it is infeasible.</p>
+<p>A high-fidelity limulator can bridge this gap in the training phase and tackle challenges.
+- Various realistic scenarios can be generated using simulated data.
+- It helps in reducing biases.
+- The lack of real-world diversity can be filled by simulation i.e content gap.The simulated data depicts the real-world characteristics which can overcome the appearance gap.</p>
+<p>The focus of the limulator :</p>
+<pre><code>                     (Flow chart with 2 levels)
+                      Reference 5th slide PPT
 </code></pre>
-<h2 id="platforms">Platforms</h2>
-<p>[slide-20-image.jpg]
-Now that the scene is generated, it is time to add some sensors, but before that, we must specify platform objects. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc. It could be a fixed object with no trajectory(i.e. static), a dynamic object with a trajectory imported from outside or an actor(dynamic object inside the scene). Regardless, a platform with a known trajectory must be created before creating any sensors.</p>
-<h2 id="sensors">Sensors</h2>
-<p>[slide-22-image.jpg]
-With platform/platforms ready, sensors could now be created. The process is very similar to creating platforms; a location and orientation with respect to the platform must be provided. For e.g., if the sensor is placed at the platform's centre, the location must be (0, 0, 0). Remaining parameters like PRF, Scanning frequency, Channels, etc., are generic to the lidars sensors and can be copied as it is from the specification manual of the sensor.</p>
-<h2 id="cameras">Cameras</h2>
-<p>[slide-23-image.jpg]
-Adding a camera sensor is just the same as adding a lidar sensor with camera-specific parameters like focal length, iso, etc.</p>
-<h2 id="limulate">Limulate!</h2>
-<p>[slide-25-image.jpg]
-This is where the magic happens. But before that note, a standard dynamic model in  Blender runs at 30fps, but the laser works on 2k-800k Hz. Rendering a simulation at such low fps will throw out almost all the information and will be useless. Hence, the animation is scaled to level it to the sensors.</p>
-<p>[slide-17-image.jpg]</p>
-<p>The remaining part is straightforward. A laser is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
-<h2 id="test-platform">Test Platform</h2>
+<p>Previous contribution of limulator since 2007:
+- Few publications such as Airborne Altimetric LiDAR.
+- Won ISPRS awards
+- Thousands of data download from limulator for educational and aerial platforms.
+- Chandrayan LLRI simulation - Return waveform and point cloud simulation.</p>
+<h2 id="limulator-components">Limulator Components</h2>
+<p>There are four major components of a limulator :
+1. Terrain component<br />
+2. Trajectory component
+3. Platform component
+4. Sensor component</p>
+<pre><code>    (Image on 7th slide to be included here)
+</code></pre>
+<p>The terrain Component involves the formation of 3D static terrain imagery that resembles a real scene. The imagery includes great detailing which enables the possibility of scenario generation. The trajectory component on the other hand is responsible for adding dynamism to the static imagery. This is achieved by considering the acceleration and attitude change of moving objects. The platform component takes user input to narrow down the requirements such as platform type (mobile, stationary, ground-based, aerial), placement of the sensor on the platform, sensor type, orientation, trajectory, and so on. The sensor component emphasizes the type of the sensor i.e LiDAR or camera and takes input on sensor characteristics such as position, orientation, PRF, scan range, FOV, etc.</p>
+<h3 id="terrain-module">Terrain module</h3>
+<h3 id="trajectory-module">Trajectory Module</h3>
+<h3 id="simulator-platform-setup">Simulator / Platform setup</h3>
+<pre><code> - Slide 17
+</code></pre>
+<h3 id="platform-module">Platform Module</h3>
+<h3 id="sensor-camera-module">Sensor &amp; Camera Module</h3>
+<h3 id="limulate">Limulate!</h3>
+<h2 id="limulator-ui">Limulator UI</h2>
 
 
 
