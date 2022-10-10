@@ -13,7 +13,7 @@
     
     
       
-        <title>SUMMARY - Limulator</title>
+        <title>Overview - Limulator</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SUMMARY
+              Overview
             
           </span>
         </div>
@@ -152,10 +157,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../overview/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Overview
     </a>
   </li>
@@ -257,11 +264,87 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Overview
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scene-generation-with-blender" class="md-nav__link">
+    Scene Generation with Blender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cameras" class="md-nav__link">
+    Cameras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limulate" class="md-nav__link">
+    Limulate!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-platform" class="md-nav__link">
+    Test Platform
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -493,6 +576,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scene-generation-with-blender" class="md-nav__link">
+    Scene Generation with Blender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    Sensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cameras" class="md-nav__link">
+    Cameras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limulate" class="md-nav__link">
+    Limulate!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-platform" class="md-nav__link">
+    Test Platform
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -507,26 +642,25 @@
                   
 
 
-  <h1>SUMMARY</h1>
-
-<ul>
-<li><a href="../overview/">Overview</a></li>
-<li><a href="../startup/">Getting Started</a></li>
-<li><a href="../tutorials/">Tutorials</a></li>
-<li><a href="../system_doc/">System Documentation</a></li>
-<li><a href="../references/">References</a><ul>
-<li>API Reference<ul>
-<li><a href="../modules/laser/">Laser Module</a></li>
-<li><a href="../modules/camera/">Camera Module</a></li>
-<li><a href="../modules/platform/">Platform Module</a></li>
-<li><a href="../modules/ui/">UI</a></li>
-<li><a href="../modules/server_processing/">Server Processing</a></li>
-<li><a href="../modules/others/">Others</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h1 id="overview">Overview</h1>
+<h2 id="scene-generation-with-blender">Scene Generation with Blender</h2>
+<pre><code>Not yet ready.
+</code></pre>
+<h2 id="platforms">Platforms</h2>
+<p>[slide-20-image.jpg]
+Now that the scene is generated, it is time to add some sensors, but before that, we must specify platform objects. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc. It could be a fixed object with no trajectory(i.e. static), a dynamic object with a trajectory imported from outside or an actor(dynamic object inside the scene). Regardless, a platform with a known trajectory must be created before creating any sensors.</p>
+<h2 id="sensors">Sensors</h2>
+<p>[slide-22-image.jpg]
+With platform/platforms ready, sensors could now be created. The process is very similar to creating platforms; a location and orientation with respect to the platform must be provided. For e.g., if the sensor is placed at the platform's centre, the location must be (0, 0, 0). Remaining parameters like PRF, Scanning frequency, Channels, etc., are generic to the lidars sensors and can be copied as it is from the specification manual of the sensor.</p>
+<h2 id="cameras">Cameras</h2>
+<p>[slide-23-image.jpg]
+Adding a camera sensor is just the same as adding a lidar sensor with camera-specific parameters like focal length, iso, etc.</p>
+<h2 id="limulate">Limulate!</h2>
+<p>[slide-25-image.jpg]
+This is where the magic happens. But before that note, a standard dynamic model in  Blender runs at 30fps, but the laser works on 2k-800k Hz. Rendering a simulation at such low fps will throw out almost all the information and will be useless. Hence, the animation is scaled to level it to the sensors.</p>
+<p>[slide-17-image.jpg]</p>
+<p>The remaining part is straightforward. A laser is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
+<h2 id="test-platform">Test Platform</h2>
 
 
 
@@ -542,6 +676,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="../startup/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Getting Started
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

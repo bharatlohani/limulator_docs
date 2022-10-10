@@ -160,6 +160,18 @@
 
 
   <li class="md-tabs__item">
+    <a href="../../overview/" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
     <a href="../../startup/" class="md-tabs__link">
       Getting Started
     </a>
@@ -201,23 +213,11 @@
   
   
     <li class="md-tabs__item">
-      <a href="../laser/" class="md-tabs__link md-tabs__link--active">
-        Module Documentation
+      <a href="../../references/" class="md-tabs__link md-tabs__link--active">
+        References
       </a>
     </li>
   
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../references/" class="md-tabs__link">
-      References
-    </a>
-  </li>
 
       
     </ul>
@@ -257,6 +257,21 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
     
       
       
@@ -316,20 +331,62 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Module Documentation
+        <label class="md-nav__link" for="__nav_5">
+          References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Module Documentation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Module Documentation
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -497,18 +554,10 @@
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/" class="md-nav__link">
-        References
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -652,159 +701,6 @@
   </table>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Modules\camera.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">camera</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Camera class. It lets create and render images based on the camera paeameters</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        camera_data (json): camera data</span>
-<span class="sd">        platform_data</span>
-<span class="sd">        camera_name</span>
-<span class="sd">        fps</span>
-<span class="sd">        outfile_location</span>
-<span class="sd">        focal_length</span>
-<span class="sd">        x_resolution</span>
-<span class="sd">        y_resolution</span>
-<span class="sd">        start_frame</span>
-<span class="sd">        end_frame</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_data</span><span class="p">:</span><span class="n">json</span><span class="p">,</span> <span class="n">platform_data</span><span class="p">:</span><span class="n">json</span><span class="p">,</span><span class="n">sensor_data</span><span class="p">:</span><span class="n">json</span><span class="p">)</span> <span class="o">-&gt;</span><span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; Initialize a Camera class. Get all camera parameters</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            camera_data: camera data</span>
-<span class="sd">            platform_data: Platform data</span>
-<span class="sd">            sensor_data: Sensor Data</span>
-<span class="sd">        &quot;&quot;&quot;</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span> <span class="o">=</span> <span class="n">camera_data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span> <span class="o">=</span> <span class="n">platform_data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span> <span class="o">=</span> <span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;camera_name&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s1">&#39;fps&#39;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">outfile_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s1">&#39;render&#39;</span><span class="p">][</span><span class="s1">&#39;output_file_location&#39;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;/camera/&quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span><span class="o">+</span><span class="s2">&quot;_&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">focal_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;focal_length&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x_resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;resolution&quot;</span><span class="p">][</span><span class="s2">&quot;x&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y_resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;resolution&quot;</span><span class="p">][</span><span class="s2">&quot;y&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">start_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s2">&quot;render&quot;</span><span class="p">][</span><span class="s2">&quot;start_frame&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">end_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s2">&quot;render&quot;</span><span class="p">][</span><span class="s2">&quot;end_frame&quot;</span><span class="p">]</span>
-
-        <span class="c1"># Calculate camera framescale based on Lidar Sensor PRF, number of channels and Camera FPS</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">prf</span> <span class="o">=</span> <span class="n">sensor_data</span><span class="p">[</span><span class="s2">&quot;parameters&quot;</span><span class="p">][</span><span class="s2">&quot;prf&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_channels</span> <span class="o">=</span> <span class="n">sensor_data</span><span class="p">[</span><span class="s2">&quot;parameters&quot;</span><span class="p">][</span><span class="s2">&quot;vertical_scanning&quot;</span><span class="p">][</span><span class="s2">&quot;number_of_channels&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_framescale</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prf</span><span class="o">/</span><span class="p">(</span><span class="n">camera_data</span><span class="p">[</span><span class="s1">&#39;fps&#39;</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_channels</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_frame</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">end_frame</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_framescale</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_camera</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">create_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Creates a blender camera object inside empty camera object </span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="c1"># Create an camera object</span>
-        <span class="n">camera_data</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">cameras</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Camera&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Camera&#39;</span><span class="p">,</span> <span class="n">camera_data</span><span class="p">)</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;Sensor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="p">)</span>
-        <span class="n">camera_parent_obj</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">camera_parent_obj</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span>
-
-        <span class="c1"># Set camera focal length and resolution</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">focal_length</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">resolution_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_resolution</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">resolution_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_resolution</span>
-
-
-    <span class="k">def</span> <span class="nf">render_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Renders frames for the full scene with the selected camera </span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">image_settings</span><span class="o">.</span><span class="n">file_format</span> <span class="o">=</span> <span class="s1">&#39;PNG&#39;</span>
-
-        <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">)):</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">[</span><span class="n">frame</span><span class="p">]</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">))</span>
-            <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">frame_set</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-            <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfile_location</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
-            <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">write_still</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -876,59 +772,6 @@
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>Modules\camera.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_data</span><span class="p">:</span><span class="n">json</span><span class="p">,</span> <span class="n">platform_data</span><span class="p">:</span><span class="n">json</span><span class="p">,</span><span class="n">sensor_data</span><span class="p">:</span><span class="n">json</span><span class="p">)</span> <span class="o">-&gt;</span><span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Initialize a Camera class. Get all camera parameters</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        camera_data: camera data</span>
-<span class="sd">        platform_data: Platform data</span>
-<span class="sd">        sensor_data: Sensor Data</span>
-<span class="sd">    &quot;&quot;&quot;</span> 
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span> <span class="o">=</span> <span class="n">camera_data</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span> <span class="o">=</span> <span class="n">platform_data</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span> <span class="o">=</span> <span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;camera_name&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s1">&#39;fps&#39;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">outfile_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s1">&#39;render&#39;</span><span class="p">][</span><span class="s1">&#39;output_file_location&#39;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;/camera/&quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span><span class="o">+</span><span class="s2">&quot;_&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">focal_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;focal_length&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">x_resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;resolution&quot;</span><span class="p">][</span><span class="s2">&quot;x&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">y_resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_data</span><span class="p">[</span><span class="s2">&quot;resolution&quot;</span><span class="p">][</span><span class="s2">&quot;y&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">start_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s2">&quot;render&quot;</span><span class="p">][</span><span class="s2">&quot;start_frame&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">end_frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_data</span><span class="p">[</span><span class="s2">&quot;render&quot;</span><span class="p">][</span><span class="s2">&quot;end_frame&quot;</span><span class="p">]</span>
-
-    <span class="c1"># Calculate camera framescale based on Lidar Sensor PRF, number of channels and Camera FPS</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">prf</span> <span class="o">=</span> <span class="n">sensor_data</span><span class="p">[</span><span class="s2">&quot;parameters&quot;</span><span class="p">][</span><span class="s2">&quot;prf&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">number_of_channels</span> <span class="o">=</span> <span class="n">sensor_data</span><span class="p">[</span><span class="s2">&quot;parameters&quot;</span><span class="p">][</span><span class="s2">&quot;vertical_scanning&quot;</span><span class="p">][</span><span class="s2">&quot;number_of_channels&quot;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_framescale</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prf</span><span class="o">/</span><span class="p">(</span><span class="n">camera_data</span><span class="p">[</span><span class="s1">&#39;fps&#39;</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_channels</span><span class="p">))</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_frame</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">end_frame</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_framescale</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">create_camera</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -947,43 +790,6 @@
   
       <p>Creates a blender camera object inside empty camera object</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Modules\camera.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">create_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Creates a blender camera object inside empty camera object </span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Create an camera object</span>
-    <span class="n">camera_data</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">cameras</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Camera&#39;</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Camera&#39;</span><span class="p">,</span> <span class="n">camera_data</span><span class="p">)</span>
-    <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;Sensor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="p">)</span>
-    <span class="n">camera_parent_obj</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_name</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">camera_parent_obj</span>
-    <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span>
-
-    <span class="c1"># Set camera focal length and resolution</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">camera_object</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">focal_length</span>
-    <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">resolution_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_resolution</span>
-    <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">resolution_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_resolution</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1002,37 +808,6 @@
   
       <p>Renders frames for the full scene with the selected camera</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Modules\camera.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">render_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Renders frames for the full scene with the selected camera </span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">image_settings</span><span class="o">.</span><span class="n">file_format</span> <span class="o">=</span> <span class="s1">&#39;PNG&#39;</span>
-
-    <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">)):</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">[</span><span class="n">frame</span><span class="p">]</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frames_list</span><span class="p">))</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">frame_set</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfile_location</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">render</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">write_still</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Generating Camera Images&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>

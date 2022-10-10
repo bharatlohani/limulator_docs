@@ -160,6 +160,18 @@
 
 
   <li class="md-tabs__item">
+    <a href="overview/" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
     <a href="startup/" class="md-tabs__link">
       Getting Started
     </a>
@@ -199,23 +211,11 @@
   
   
     <li class="md-tabs__item">
-      <a href="modules/laser/" class="md-tabs__link">
-        Module Documentation
+      <a href="references/" class="md-tabs__link">
+        References
       </a>
     </li>
   
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="references/" class="md-tabs__link">
-      References
-    </a>
-  </li>
 
       
     </ul>
@@ -255,6 +255,21 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
     
       
       
@@ -312,20 +327,60 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Module Documentation
+        <label class="md-nav__link" for="__nav_5">
+          References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Module Documentation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Module Documentation
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -418,18 +473,10 @@
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="references/" class="md-nav__link">
-        References
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -468,6 +515,38 @@
 
 
 <h1 id="welcome-to-limulator-docs">Welcome to Limulator Docs</h1>
+<h1 id="limulator">Limulator</h1>
+<pre><code>// Some image
+</code></pre>
+<p>Limulator, i.e. LiDAR + Simulator, is a tool intended to simulate the lidar data generation and labelling process. Since then, it has come a long way to become a platform to actively support the development and testing of autonomous driving systems. As the development of autonomous systems picks pace, it has become absolutely critical to extensively test them in virtual environments before deploying them in public settings. Here we present one solution for that purpose: Limulator, a flexible simulator for point clouds, autonomous driving and much more.</p>
+<h2 id="simulator">Simulator</h2>
+<p>The simulator is built upon Blender, which provides support for the computation of high-fidelity physics, and simulation rendering and controls all the actors. Limulator controls the trajectories of actors, sensors, cameras and platforms by providing a UI interface inside Blender.</p>
+<pre><code>// Some grahic image explaining connection of blender and limulator
+</code></pre>
+<p>To gain a perspective on the structure of the Limulator, some of the major components are listed below:</p>
+<ul>
+<li>
+<p><strong>Scene</strong>: A scene is a 3D real-world model, generated in a blend file.  </p>
+</li>
+<li>
+<p><strong>Platforms</strong>: Platforms are all objects, dynamic and static, where sensors and cameras can be embedded. They can be chosen from the scene or imported from outside.</p>
+</li>
+<li>
+<p><strong>Sensors</strong>: Sensors are static objects fixed on platforms. Currently, limulator only supports LiDar sensors.</p>
+</li>
+<li>
+<p><strong>Cameras</strong>: Common as sensors, cameras are static objects fixed on platforms. Camera support in the limulator is implemented through the Blender camera module.</p>
+</li>
+</ul>
+<p>Check out some quick demos. </p>
+<pre><code>// Demo 1 (Car lidar)
+
+// Demo 2 (Car camera)
+
+// Demo 3 (Drone lidar)
+
+// Demo 4 (Drone camera maybe?)
+</code></pre>
 
 
 

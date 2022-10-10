@@ -160,6 +160,18 @@
 
 
   <li class="md-tabs__item">
+    <a href="../../overview/" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
     <a href="../../startup/" class="md-tabs__link">
       Getting Started
     </a>
@@ -201,23 +213,11 @@
   
   
     <li class="md-tabs__item">
-      <a href="../laser/" class="md-tabs__link md-tabs__link--active">
-        Module Documentation
+      <a href="../../references/" class="md-tabs__link md-tabs__link--active">
+        References
       </a>
     </li>
   
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../references/" class="md-tabs__link">
-      References
-    </a>
-  </li>
 
       
     </ul>
@@ -257,6 +257,21 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
     
       
       
@@ -316,20 +331,62 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
-          Module Documentation
+        <label class="md-nav__link" for="__nav_5">
+          References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Module Documentation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Module Documentation
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -588,18 +645,10 @@
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/" class="md-nav__link">
-        References
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -816,45 +865,6 @@
       <p>Delete the selected item from the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">450</span>
-<span class="normal">451</span>
-<span class="normal">452</span>
-<span class="normal">453</span>
-<span class="normal">454</span>
-<span class="normal">455</span>
-<span class="normal">456</span>
-<span class="normal">457</span>
-<span class="normal">458</span>
-<span class="normal">459</span>
-<span class="normal">460</span>
-<span class="normal">461</span>
-<span class="normal">462</span>
-<span class="normal">463</span>
-<span class="normal">464</span>
-<span class="normal">465</span>
-<span class="normal">466</span>
-<span class="normal">467</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_DeleteItem</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Delete the selected item from the list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;my_list.delete_item&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Deletes an item&quot;</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">my_list</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span>
-
-        <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-        <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -895,45 +905,6 @@
       <p>Delete the selected item from the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">545</span>
-<span class="normal">546</span>
-<span class="normal">547</span>
-<span class="normal">548</span>
-<span class="normal">549</span>
-<span class="normal">550</span>
-<span class="normal">551</span>
-<span class="normal">552</span>
-<span class="normal">553</span>
-<span class="normal">554</span>
-<span class="normal">555</span>
-<span class="normal">556</span>
-<span class="normal">557</span>
-<span class="normal">558</span>
-<span class="normal">559</span>
-<span class="normal">560</span>
-<span class="normal">561</span>
-<span class="normal">562</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_DeleteLabelItem</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Delete the selected item from the list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;label_list.delete_item&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Deletes an label&quot;</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">label_list</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list_index</span>
-
-        <span class="n">label_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-        <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list_index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">label_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -974,79 +945,6 @@
       <p>Reevaluates the Label list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">564</span>
-<span class="normal">565</span>
-<span class="normal">566</span>
-<span class="normal">567</span>
-<span class="normal">568</span>
-<span class="normal">569</span>
-<span class="normal">570</span>
-<span class="normal">571</span>
-<span class="normal">572</span>
-<span class="normal">573</span>
-<span class="normal">574</span>
-<span class="normal">575</span>
-<span class="normal">576</span>
-<span class="normal">577</span>
-<span class="normal">578</span>
-<span class="normal">579</span>
-<span class="normal">580</span>
-<span class="normal">581</span>
-<span class="normal">582</span>
-<span class="normal">583</span>
-<span class="normal">584</span>
-<span class="normal">585</span>
-<span class="normal">586</span>
-<span class="normal">587</span>
-<span class="normal">588</span>
-<span class="normal">589</span>
-<span class="normal">590</span>
-<span class="normal">591</span>
-<span class="normal">592</span>
-<span class="normal">593</span>
-<span class="normal">594</span>
-<span class="normal">595</span>
-<span class="normal">596</span>
-<span class="normal">597</span>
-<span class="normal">598</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_EmptyLabelList</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Reevaluates the Label list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;label_list.emptylist&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Reevaluates all elements in Label list&quot;</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">label_list</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">index</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">label_list</span><span class="p">)):</span>
-            <span class="n">label_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-            <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list_index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">label_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">all_objects</span> <span class="o">=</span>  <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="s1">&#39;Input&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">all_objects</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-            <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">all_objects</span><span class="p">:</span>
-                <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="n">np_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
-
-            <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_dict</span> <span class="o">=</span> <span class="p">{}</span>
-
-            <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list_index</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np_label</span><span class="p">)):</span>
-                <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_dict</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">np_label</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-                <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-                <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">np_label</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-                <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-                <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list_index</span><span class="o">+=</span><span class="mi">1</span>
-            <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">return</span><span class="p">{</span><span class="s1">&#39;CANCELLED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1087,31 +985,6 @@
       <p>Exports the Label list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">604</span>
-<span class="normal">605</span>
-<span class="normal">606</span>
-<span class="normal">607</span>
-<span class="normal">608</span>
-<span class="normal">609</span>
-<span class="normal">610</span>
-<span class="normal">611</span>
-<span class="normal">612</span>
-<span class="normal">613</span>
-<span class="normal">614</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_ExportLabelList</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Exports the Label list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;label_list.export&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Exports all elements in Label list&quot;</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">filepath</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;/label_dict.json&quot;</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
-            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_dict</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1152,71 +1025,6 @@
       <p>Move an item in the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">469</span>
-<span class="normal">470</span>
-<span class="normal">471</span>
-<span class="normal">472</span>
-<span class="normal">473</span>
-<span class="normal">474</span>
-<span class="normal">475</span>
-<span class="normal">476</span>
-<span class="normal">477</span>
-<span class="normal">478</span>
-<span class="normal">479</span>
-<span class="normal">480</span>
-<span class="normal">481</span>
-<span class="normal">482</span>
-<span class="normal">483</span>
-<span class="normal">484</span>
-<span class="normal">485</span>
-<span class="normal">486</span>
-<span class="normal">487</span>
-<span class="normal">488</span>
-<span class="normal">489</span>
-<span class="normal">490</span>
-<span class="normal">491</span>
-<span class="normal">492</span>
-<span class="normal">493</span>
-<span class="normal">494</span>
-<span class="normal">495</span>
-<span class="normal">496</span>
-<span class="normal">497</span>
-<span class="normal">498</span>
-<span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_MoveItem</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Move an item in the list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;my_list.move_item&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Move an item in the list&quot;</span>
-
-    <span class="n">direction</span><span class="p">:</span> <span class="n">bpy</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">EnumProperty</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">((</span><span class="s1">&#39;UP&#39;</span><span class="p">,</span> <span class="s1">&#39;Up&#39;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
-                                              <span class="p">(</span><span class="s1">&#39;DOWN&#39;</span><span class="p">,</span> <span class="s1">&#39;Down&#39;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),))</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span>
-
-    <span class="k">def</span> <span class="nf">move_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Move index of an item render queue while clamping it. &quot;&quot;&quot;</span>
-
-        <span class="n">index</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span>
-        <span class="n">list_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># (index starts at 0)</span>
-        <span class="n">new_index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;UP&#39;</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
-
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">new_index</span><span class="p">,</span> <span class="n">list_length</span><span class="p">))</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">my_list</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span>
-        <span class="n">index</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span>
-
-        <span class="n">neighbor</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;UP&#39;</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">my_list</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">neighbor</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">move_index</span><span class="p">()</span>
-
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1244,25 +1052,6 @@
   
       <p>Move index of an item render queue while clamping it.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">482</span>
-<span class="normal">483</span>
-<span class="normal">484</span>
-<span class="normal">485</span>
-<span class="normal">486</span>
-<span class="normal">487</span>
-<span class="normal">488</span>
-<span class="normal">489</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">move_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Move index of an item render queue while clamping it. &quot;&quot;&quot;</span>
-
-    <span class="n">index</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span>
-    <span class="n">list_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># (index starts at 0)</span>
-    <span class="n">new_index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;UP&#39;</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">list_index</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">new_index</span><span class="p">,</span> <span class="n">list_length</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1294,27 +1083,6 @@
       <p>Add a new item to the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">440</span>
-<span class="normal">441</span>
-<span class="normal">442</span>
-<span class="normal">443</span>
-<span class="normal">444</span>
-<span class="normal">445</span>
-<span class="normal">446</span>
-<span class="normal">447</span>
-<span class="normal">448</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_NewItem</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add a new item to the list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;my_list.new_item&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Add a new item&quot;</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">my_list</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1355,27 +1123,6 @@
       <p>Add a new label to list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">535</span>
-<span class="normal">536</span>
-<span class="normal">537</span>
-<span class="normal">538</span>
-<span class="normal">539</span>
-<span class="normal">540</span>
-<span class="normal">541</span>
-<span class="normal">542</span>
-<span class="normal">543</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LIST_OT_NewLabelItem</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add a new label to list.&quot;&quot;&quot;</span>
-
-    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">&quot;label_list.new_item&quot;</span>
-    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">&quot;Add a new label&quot;</span>
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
-        <span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">label_list</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-        <span class="k">return</span><span class="p">{</span><span class="s1">&#39;FINISHED&#39;</span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1416,35 +1163,6 @@
       <p>Group of properties representing an label item in the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">501</span>
-<span class="normal">502</span>
-<span class="normal">503</span>
-<span class="normal">504</span>
-<span class="normal">505</span>
-<span class="normal">506</span>
-<span class="normal">507</span>
-<span class="normal">508</span>
-<span class="normal">509</span>
-<span class="normal">510</span>
-<span class="normal">511</span>
-<span class="normal">512</span>
-<span class="normal">513</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">LabelListItem</span><span class="p">(</span><span class="n">PropertyGroup</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Group of properties representing an label item in the list.&quot;&quot;&quot;</span>
-
-    <span class="n">name</span><span class="p">:</span> <span class="n">StringProperty</span><span class="p">(</span>
-           <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
-           <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Object Name&quot;</span><span class="p">,</span>
-           <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-    <span class="n">value</span><span class="p">:</span> <span class="n">StringProperty</span><span class="p">(</span>
-           <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span>
-           <span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-           <span class="n">default</span><span class="o">=</span><span class="s2">&quot;999&quot;</span>
-           <span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1485,35 +1203,6 @@
       <p>Group of properties representing an item in the list.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span>
-<span class="normal">413</span>
-<span class="normal">414</span>
-<span class="normal">415</span>
-<span class="normal">416</span>
-<span class="normal">417</span>
-<span class="normal">418</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ListItem</span><span class="p">(</span><span class="n">PropertyGroup</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Group of properties representing an item in the list.&quot;&quot;&quot;</span>
-
-    <span class="n">name</span><span class="p">:</span> <span class="n">StringProperty</span><span class="p">(</span>
-           <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
-           <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A name for this item&quot;</span><span class="p">,</span>
-           <span class="n">default</span><span class="o">=</span><span class="s2">&quot;List Item&quot;</span><span class="p">)</span>
-
-    <span class="n">random_prop</span><span class="p">:</span> <span class="n">StringProperty</span><span class="p">(</span>
-           <span class="n">name</span><span class="o">=</span><span class="s2">&quot;JSON Path&quot;</span><span class="p">,</span>
-           <span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-           <span class="n">default</span><span class="o">=</span><span class="s2">&quot;*.json&quot;</span><span class="p">,</span>
-           <span class="n">subtype</span><span class="o">=</span><span class="s1">&#39;FILE_PATH&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1554,47 +1243,6 @@
       <p>Demo UIList.</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">420</span>
-<span class="normal">421</span>
-<span class="normal">422</span>
-<span class="normal">423</span>
-<span class="normal">424</span>
-<span class="normal">425</span>
-<span class="normal">426</span>
-<span class="normal">427</span>
-<span class="normal">428</span>
-<span class="normal">429</span>
-<span class="normal">430</span>
-<span class="normal">431</span>
-<span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
-<span class="normal">435</span>
-<span class="normal">436</span>
-<span class="normal">437</span>
-<span class="normal">438</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">MY_UL_List</span><span class="p">(</span><span class="n">UIList</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Demo UIList.&quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">draw_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="n">active_data</span><span class="p">,</span>
-                  <span class="n">active_propname</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
-
-        <span class="c1"># We could write some code to decide which icon to use here...</span>
-        <span class="c1">#custom_icon = &#39;OBJECT_DATAMODE&#39;</span>
-
-        <span class="c1"># Make sure your code supports all 3 layout types</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;DEFAULT&#39;</span><span class="p">,</span> <span class="s1">&#39;COMPACT&#39;</span><span class="p">}:</span>
-            <span class="c1">#layout.label(text=item.name, icon = custom_icon)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">random_prop</span><span class="p">)</span>
-
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;GRID&#39;</span><span class="p">}:</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="s1">&#39;CENTER&#39;</span>
-            <span class="c1">#layout.label(text=&quot;&quot;, icon = custom_icon)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1635,47 +1283,6 @@
       <p>Display Labels</p>
 
 
-        <details class="quote">
-          <summary>Source code in <code>Source Code\main2.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">515</span>
-<span class="normal">516</span>
-<span class="normal">517</span>
-<span class="normal">518</span>
-<span class="normal">519</span>
-<span class="normal">520</span>
-<span class="normal">521</span>
-<span class="normal">522</span>
-<span class="normal">523</span>
-<span class="normal">524</span>
-<span class="normal">525</span>
-<span class="normal">526</span>
-<span class="normal">527</span>
-<span class="normal">528</span>
-<span class="normal">529</span>
-<span class="normal">530</span>
-<span class="normal">531</span>
-<span class="normal">532</span>
-<span class="normal">533</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">SCENE_LABEL_List</span><span class="p">(</span><span class="n">UIList</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Display Labels&quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">draw_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="n">active_data</span><span class="p">,</span>
-                  <span class="n">active_propname</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
-
-        <span class="c1"># We could write some code to decide which icon to use here...</span>
-        <span class="c1">#custom_icon = &#39;OBJECT_DATAMODE&#39;</span>
-
-        <span class="c1"># Make sure your code supports all 3 layout types</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;DEFAULT&#39;</span><span class="p">,</span> <span class="s1">&#39;COMPACT&#39;</span><span class="p">}:</span>
-            <span class="c1">#layout.label(text=item.name, icon = custom_icon)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;GRID&#39;</span><span class="p">}:</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="s1">&#39;CENTER&#39;</span>
-            <span class="c1">#layout.label(text=&quot;&quot;, icon = custom_icon)</span>
-            <span class="n">layout</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        </details>
 
   
 
@@ -1715,55 +1322,6 @@
 sensor_count (int) - Count of the lidar sensors to be added
 camera_count (int) - Count of the camera sensors to be added</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">createNew</span><span class="p">(</span><span class="n">sensor_count</span><span class="p">,</span> <span class="n">camera_count</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Creates a empty json structure for a new platform design</span>
-
-<span class="sd">    Args: </span>
-<span class="sd">    sensor_count (int) - Count of the lidar sensors to be added</span>
-<span class="sd">    camera_count (int) - Count of the camera sensors to be added</span>
-
-<span class="sd">    Returns: None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;platform_data&quot;</span><span class="p">:{},</span>
-            <span class="s2">&quot;sensors&quot;</span><span class="p">:{},</span>
-            <span class="s2">&quot;cameras&quot;</span><span class="p">:</span> <span class="p">{}</span>
-            <span class="p">}</span>
-    <span class="n">sensor_data</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">camera_data</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">sn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">sensor_count</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">sensor_data</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">sn</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">cn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">camera_count</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">camera_data</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cn</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span> <span class="p">[</span><span class="s2">&quot;sensors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sensor_data</span>
-    <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span> <span class="p">[</span><span class="s2">&quot;cameras&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">camera_data</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1784,51 +1342,6 @@ camera_count (int) - Count of the camera sensors to be added</p>
       <p>Returns: 
     None</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delete_platforms</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Deletes all pre generated sensor objects</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            self</span>
-
-<span class="sd">        Returns: </span>
-<span class="sd">            None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">coll</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Sensor&quot;</span><span class="p">)</span>
-        <span class="n">obs</span> <span class="o">=</span> <span class="p">[</span><span class="n">o</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">coll</span><span class="o">.</span><span class="n">objects</span><span class="p">]</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Deleting existing platforms&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">while</span> <span class="n">obs</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">update_progress</span><span class="p">(</span><span class="s2">&quot;Deleting existing platforms&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">))</span>
-            <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">obs</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span> <span class="n">do_unlink</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="n">new_col</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Sensor&quot;</span><span class="p">)</span>
-        <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">new_col</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1847,61 +1360,6 @@ camera_count (int) - Count of the camera sensors to be added</p>
   
       <p>Exports json file containing all platform, lidar and camera parameters to a given location or overrides a given json file with new data</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">export_json</span><span class="p">(</span><span class="n">override</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Exports json file containing all platform, lidar and camera parameters to a given location or overrides a given json file with new data</span>
-
-<span class="sd">    Args: None</span>
-
-<span class="sd">    Returns: None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">folder_path</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-        <span class="c1"># For Exporting a new JSON file on the given folder path</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Exporting json at&quot;</span><span class="p">,</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">folder_path</span><span class="o">+</span><span class="s2">&quot;platform_data.json&quot;</span><span class="p">)</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">folder_path</span><span class="o">+</span><span class="s2">&quot;platform_data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
-            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">override</span><span class="p">:</span>
-            <span class="c1"># Create a new filename on the same path</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">)</span>
-                <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">)</span>
-                <span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[:</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span><span class="n">filename</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.json&quot;</span>
-                <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span> <span class="o">=</span> <span class="n">filepath</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">filename</span>
-            <span class="k">except</span><span class="p">:</span>
-                <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="o">+</span> <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;_1.json&quot;</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
-            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Exported&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1920,29 +1378,6 @@ camera_count (int) - Count of the camera sensors to be added</p>
   
       <p>Imports label dictionary json file from the provided path for label_dict_filepath</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">import_label_dict</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Imports label dictionary json file from the provided path for label_dict_filepath</span>
-
-<span class="sd">    Args: None</span>
-
-<span class="sd">    Returns: None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">label_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_dict_filepath</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-    <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">label_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">label_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -1961,31 +1396,6 @@ camera_count (int) - Count of the camera sensors to be added</p>
   
       <p>Reads json file containing all platform, lidar and camera parameters to a given location</p>
 
-      <details class="quote">
-        <summary>Source code in <code>Source Code\main2.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_JSON_data</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Reads json file containing all platform, lidar and camera parameters to a given location</span>
-
-<span class="sd">    Args: None</span>
-
-<span class="sd">    Returns: None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Reading file at&quot;</span><span class="p">,</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">)</span>
-    <span class="n">json_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">json_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-    <span class="n">global_data</span><span class="o">.</span><span class="n">bl_scene</span><span class="o">.</span><span class="n">all_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
