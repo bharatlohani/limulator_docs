@@ -635,8 +635,8 @@
 <pre><code>Not yet ready.
 </code></pre>
 <h3 id="platforms">Platforms<a class="headerlink" href="#platforms" title="Permanent link">&para;</a></h3>
-<p>[slide-20-image.jpg]
-Now that the scene is generated, it is time to add some sensors, but before that, we must specify platform objects. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc. It could be a fixed object with no trajectory(i.e. static), a dynamic object with a trajectory imported from outside or an actor(dynamic object inside the scene). Regardless, a platform with a known trajectory must be created before creating any sensors.</p>
+<p><div class="video-container"><iframe src="../content/platform_design.mp4" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div><div class="video-container"><iframe src="../content/platform_design2.mp4" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<p>Now that the scene is generated, it is time to add some sensors, but before that, we must specify platform objects. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc. It could be a fixed object with no trajectory(i.e. static), a dynamic object with a trajectory imported from outside or an actor(dynamic object inside the scene). Regardless, a platform with a known trajectory must be created before creating any sensors.</p>
 <h3 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h3>
 <p>[slide-22-image.jpg]
 With platform/platforms ready, sensors could now be created. The process is very similar to creating platforms; a location and orientation with respect to the platform must be provided. For e.g., if the sensor is placed at the platform's centre, the location must be (0, 0, 0). Remaining parameters like PRF, Scanning frequency, Channels, etc., are generic to the lidars sensors and can be copied as it is from the specification manual of the sensor.</p>
@@ -649,7 +649,7 @@ This is where the magic happens. But before that note, a standard dynamic model 
 <p>[slide-17-image.jpg]</p>
 <p>The remaining part is straightforward. A laser is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
 <h3 id="test-platform">Test Platform<a class="headerlink" href="#test-platform" title="Permanent link">&para;</a></h3>
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
 
 
 
