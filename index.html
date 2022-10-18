@@ -227,8 +227,6 @@
         display: none
       }
     }
-  </style>
-  <style>
 
     .md-main {
         flex-grow: 0
@@ -333,6 +331,10 @@
         .tx-hero h1 {
             font-size: 1.4rem
         }
+
+        .feature-text img{
+          display: none !important;
+        }
     }
 
     @media screen and (min-width:60em) {
@@ -384,6 +386,7 @@
             flex: 1;
             min-width: 0;
         }
+
 
         .feature-item:hover {
             background-color: #526cfe47;
@@ -440,6 +443,13 @@
     .md-footer-social {
         padding-top: 20px;
     }
+    
+    .feature-text{
+      font-size: 16px;
+      line-height: 1.8em;
+      padding: 0 15px;
+
+    }
 </style>
   <section class="mdx-container">
     <div class="md-grid md-typeset">
@@ -461,12 +471,12 @@
       </div>
     </div>
   </section>
-  <div class="top-hr feature-item">
+  <div class="top-hr feature-text">
     <p>Limulator, i.e. LiDAR + Simulator, is a tool intended to simulate the lidar data generation and labelling process. It has come a long way to become a platform to actively support the development and testing of autonomous driving systems. As the development of autonomous systems picks pace, it has become absolutely critical to extensively test them in virtual environments before deploying them in public settings. Here we present one solution for that purpose: Limulator, a flexible simulator for point clouds, autonomous driving and much more.<br>
     The simulator is built upon Blender, which provides support for the computation of high-fidelity physics, and simulation rendering and controls all the actors. Limulator controls the trajectories of actors, sensors, cameras and platforms by providing a UI interface inside Blender.</p>    
     <img src="https://th.bing.com/th/id/OIP.BqW35DPRFQPyneeJhhwV0QHaGk?pid=ImgDet&rs=1" height="250">
   </div>
-  <div class="top-hr feature-item">  
+  <div class="top-hr feature-text">  
     <p>To gain a perspective on the structure of the Limulator, some of the major components are listed below:</p>
   </div>
   <div class="top-hr">
