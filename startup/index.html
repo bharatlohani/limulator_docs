@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://bharatlohani.github.io/limulator_docs/startup/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
@@ -156,6 +158,18 @@
         
   
   
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
     
   
 
@@ -240,6 +254,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -279,6 +308,26 @@
   <a href="#download" class="md-nav__link">
     Download
   </a>
+  
+    <nav class="md-nav" aria-label="Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-git" class="md-nav__link">
+    With Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-zip" class="md-nav__link">
+    From Zip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -398,18 +447,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_4">
           References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="References" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           References
         </label>
@@ -524,6 +573,26 @@
     Download
   </a>
   
+    <nav class="md-nav" aria-label="Download">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-git" class="md-nav__link">
+    With Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-zip" class="md-nav__link">
+    From Zip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -625,15 +694,21 @@
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
 <h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
+<h3 id="with-git">With Git<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h3>
+<p>Limulator can be directly used from GitHub by cloning the repository into a subfolder of your project root which might be useful if you want to use the very latest version:</p>
+<p><code>git clone https://github.com/bharatlohani/Limulator---Blender.git</code></p>
+<h3 id="from-zip">From Zip<a class="headerlink" href="#from-zip" title="Permanent link">&para;</a></h3>
+<p>Download and extract from the below link:
+<a href="https://github.com/bharatlohani/Limulator---Blender/archive/refs/heads/main.zip">Source_Code.zip</a></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <h3 id="scene-generation-with-blender">Scene Generation with Blender<a class="headerlink" href="#scene-generation-with-blender" title="Permanent link">&para;</a></h3>
-<pre><code>Not yet ready.
-</code></pre>
+<div class="highlight"><pre><span></span><code>Not yet ready.
+</code></pre></div>
 <h3 id="platforms">Platforms<a class="headerlink" href="#platforms" title="Permanent link">&para;</a></h3>
-<p><div class="video-container"><iframe src="../content/platform_design.mp4" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div><div class="video-container"><iframe src="../content/platform_design2.mp4" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<p><div class="video-container"><iframe src="../content/platform_design.mp4" style="width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div><div class="video-container"><iframe src="../content/platform_design2.mp4" style="width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
 <p>Now that the scene is generated, it is time to add some sensors, but before that, we must specify platform objects. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc. It could be a fixed object with no trajectory(i.e. static), a dynamic object with a trajectory imported from outside or an actor(dynamic object inside the scene). Regardless, a platform with a known trajectory must be created before creating any sensors.</p>
 <h3 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h3>
 <p>[slide-22-image.jpg]
@@ -647,7 +722,6 @@ This is where the magic happens. But before that note, a standard dynamic model 
 <p>[slide-17-image.jpg]</p>
 <p>The remaining part is straightforward. A laser is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
 <h3 id="test-platform">Test Platform<a class="headerlink" href="#test-platform" title="Permanent link">&para;</a></h3>
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" style="width: 40%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
 
 
 
@@ -675,6 +749,21 @@ This is where the magic happens. But before that note, a standard dynamic model 
       
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
       
       
         
