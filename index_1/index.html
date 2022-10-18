@@ -13,7 +13,7 @@
     
     
       
-        <title>SUMMARY - Limulator</title>
+        <title>Welcome to Limulator Docs - Limulator</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#welcome-to-limulator-docs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SUMMARY
+              Welcome to Limulator Docs
             
           </span>
         </div>
@@ -206,7 +211,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -369,7 +376,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -377,6 +386,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
 </nav>
@@ -392,21 +403,42 @@
                   
 
 
-  <h1>SUMMARY</h1>
-
+<h1 id="welcome-to-limulator-docs">Welcome to Limulator Docs<a class="headerlink" href="#welcome-to-limulator-docs" title="Permanent link">&para;</a></h1>
+<h1 id="limulator">Limulator<a class="headerlink" href="#limulator" title="Permanent link">&para;</a></h1>
+<p><img alt="Banner" src="../content/Picture1.png" /></p>
+<p>Limulator, i.e. LiDAR + Simulator, is a tool intended to simulate the lidar data generation and labelling process. Since then, it has come a long way to become a platform to actively support the development and testing of autonomous driving systems. As the development of autonomous systems picks pace, it has become absolutely critical to extensively test them in virtual environments before deploying them in public settings. Here we present one solution for that purpose: Limulator, a flexible simulator for point clouds, autonomous driving and much more.</p>
+<h2 id="simulator">Simulator<a class="headerlink" href="#simulator" title="Permanent link">&para;</a></h2>
+<p>The simulator is built upon Blender, which provides support for the computation of high-fidelity physics, and simulation rendering and controls all the actors. Limulator controls the trajectories of actors, sensors, cameras and platforms by providing a UI interface inside Blender.</p>
+<pre><code>// Some grahic image explaining connection of blender and limulator
+</code></pre>
+<p>To gain a perspective on the structure of the Limulator, some of the major components are listed below:</p>
 <ul>
-<li><a href="../startup/">Getting Started</a></li>
-<li><a href="../tutorials/">Tutorials</a></li>
-<li><a href="../references/">References</a><ul>
-<li><a href="references/#lidar-basics">Lidar Basics</a></li>
-<li><a href="references/#blender">Blender</a></li>
-<li><a href="../system_doc/">System Documentation</a></li>
-<li><a href="../api/">API Reference</a></li>
-</ul>
+<li>
+<p><strong>Scene</strong>: A scene is a 3D real-world model, generated in a blend file.  </p>
+</li>
+<li>
+<p><strong>Platforms</strong>: Platforms are all objects, dynamic and static, where sensors and cameras can be embedded. They can be chosen from the scene or imported from outside.</p>
+</li>
+<li>
+<p><strong>Sensors</strong>: Sensors are static objects fixed on platforms. Currently, limulator only supports LiDar sensors.</p>
+</li>
+<li>
+<p><strong>Cameras</strong>: Common as sensors, cameras are static objects fixed on platforms. Camera support in the limulator is implemented through the Blender camera module.</p>
 </li>
 </ul>
+<p>Check out some quick demos. </p>
+<pre><code>// Demo 1 (Car lidar)
+
+// Demo 2 (Car camera)
+
+// Demo 3 (Drone lidar)
+
+// Demo 4 (Drone camera maybe?)
+</code></pre>
 
 
+
+  
 
 
 

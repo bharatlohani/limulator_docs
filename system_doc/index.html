@@ -688,13 +688,47 @@ Some of the challenges faced are :</p>
 <p><img alt="limulator components" src="../content/limulator_components.png" /></p>
 <p>The terrain Component involves the formation of 3D static terrain imagery that resembles a real scene. The imagery includes great detailing which enables the possibility of scenario generation. The trajectory component on the other hand is responsible for adding dynamism to the static imagery. This is achieved by considering the acceleration and attitude change of moving objects. The platform component takes user input to narrow down the requirements such as platform type (mobile, stationary, ground-based, aerial), placement of the sensor on the platform, sensor type, orientation, trajectory, and so on. The sensor component emphasizes the type of the sensor i.e LiDAR or camera and takes input on sensor characteristics such as position, orientation, PRF, scan range, FOV, etc.</p>
 <h4 id="terrain-module">Terrain module<a class="headerlink" href="#terrain-module" title="Permanent link">&para;</a></h4>
+<p>The terrain module consists creation of static objects. It has sub-components which include the creation of 3D assets, GIS layer, and DEM.</p>
+<pre><code>                                 The image on slide 9 is to be included here
+</code></pre>
+<p>Step 1 - Analysis and quantification of the scene
+An already existing scene is taken from dales data on which the size of terrain and surface structures are identified. The next procedure is to perform object quantification which involves class identification i.e car, building, traffic light, etc, and dimensions of the objects i.e height, width, etc.</p>
+<p>Step 2 - Data Preparation 
+Data prepared as follows -
+ - Terrain heatmap and texture
+ - The scene’s footprint and design are created in the file format OSM/ .shp/ Basemap data
+ - Computer-generated architecture (CGA) rules file</p>
+<p>Step 3 - Modelling in CityEngine
+A mesh file is created in this step, is created as follows - 
+ - Adjusting attributes to create more variations of 3D objects
+ - Mapping and applying textures
+ - A triangulated mesh file is generated and it is exported in .obj file format</p>
 <h4 id="trajectory-module">Trajectory Module<a class="headerlink" href="#trajectory-module" title="Permanent link">&para;</a></h4>
+<p>Here we will add dynamism to the static objects created in the previous step.
+Three ways to apply dynamism are behavior modeling + trajectory, Nurbs path (blender), and Behavior modeling (blender). </p>
+<pre><code>                                 The image on the slide 13 PPT
+</code></pre>
+<p>Blend file preparation </p>
+<pre><code>                                 The Image on slide 16 to be inserted
+</code></pre>
 <h4 id="simulator-platform-setup">Simulator / Platform setup<a class="headerlink" href="#simulator-platform-setup" title="Permanent link">&para;</a></h4>
 <pre><code> - Slide 17
 </code></pre>
 <h4 id="platform-module">Platform Module<a class="headerlink" href="#platform-module" title="Permanent link">&para;</a></h4>
+<p>Configuration of the platform is taken by the user. The user is expected to input orientation, render period as well as platform movement data source. Platform trajectory is taken through a csv file.</p>
+<pre><code>                     Images of slide 18 , 19 and 20 to elaborate platform design
+</code></pre>
 <h4 id="sensor-camera-module">Sensor &amp; Camera Module<a class="headerlink" href="#sensor-camera-module" title="Permanent link">&para;</a></h4>
+<p>LiDAR sensor setup takes inputs from user with the help of an interactive UI. It takes sensor name, position, orientation, PRF, scan range, horizontal and vertical scanning patterns,and error parameters.</p>
+<pre><code>                                   Slide 22 LiDAR sensor img
+</code></pre>
+<p>Camera sensor setup expects camera name, position, orientation, camera FPS, frame resolution and focal length as inputs.</p>
+<pre><code>                                    Slide 23 camera sensor img
+</code></pre>
 <h4 id="limulate">Limulate!<a class="headerlink" href="#limulate" title="Permanent link">&para;</a></h4>
+<p>The final step of the simulation process is limulating. Once the user clicks on <strong>limulate</strong> button the progress can be seen on the terminaland point cloud is generated.</p>
+<pre><code>                                   Slide 25 PPT images
+</code></pre>
 <h3 id="limulator-ui">Limulator UI<a class="headerlink" href="#limulator-ui" title="Permanent link">&para;</a></h3>
 <h3 id="class-diagram">Class Diagram<a class="headerlink" href="#class-diagram" title="Permanent link">&para;</a></h3>
 <h3 id="process-diagram">Process Diagram<a class="headerlink" href="#process-diagram" title="Permanent link">&para;</a></h3>
@@ -778,7 +812,7 @@ Some of the challenges faced are :</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "stable"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../assets/javascripts/bundle.6079f66d.min.js"></script>
       
     
   </body>
