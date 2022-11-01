@@ -716,9 +716,9 @@ Refer to the image below.</li>
 </ol>
 <p><img alt="Platforms parameter pop-up" src="../content/platform_parameters.png" /></p>
 <h3 id="setup-sensors">Setup Sensors<a class="headerlink" href="#setup-sensors" title="Permanent link">&para;</a></h3>
-<p>Now since the platform ready, its time to setup a LiDAR sensor. Under <strong>Sensor</strong> dropdown option with the camera ID (1 in current case) is displayed (for example in case of 2 sensors, two options - 1, 2 would be displayed). Clicking the option would display a window to enter sensor parameters.</p>
+<p>Now since the platform is ready, its time to setup a LiDAR sensor. Under <strong>Sensor</strong> dropdown option with the camera ID (1 in current case) is displayed (for example in case of 2 sensors, two options - 1, 2 would be displayed). Clicking the option would display a window to enter sensor parameters.</p>
 <p><img alt="Sensor parameter pop-up" src="../content/sensor_parameters.png" /></p>
-<p>Here provide location (x, y, z) and orientation (omega, phi, kappa) with respect to the platform must be provided. Remaining parameters like PRF, Scanning frequency, Channels, etc., are specific to each LiDAR sensor and be referred from their data sheets.</p>
+<p>Here, provide location (x, y, z) and orientation (omega, phi, kappa) with respect to the platform object. Remaining parameters like PRF, Scanning frequency, Channels, etc., are specific to each LiDAR sensor and be referred from their data sheets.</p>
 <details class="info">
 <summary>For more information about sensor parameters:</summary>
 <p><a href="/docs/tutorials_2.md">Guide: Understanding sensor parameters</a></p>
@@ -731,7 +731,7 @@ Refer to the image below.</li>
 <p>Configuring a camera sensor is similar to setting up a lidar sensor with camera-specific parameters like focal length, iso, etc.</p>
 <p><img alt="Camera parameter pop-up" src="../content/camera_parameters.png" /></p>
 <h3 id="test-platform">Test Platform<a class="headerlink" href="#test-platform" title="Permanent link">&para;</a></h3>
-<p>Now to visualise how the sensors and cameras would be attached to the platform, head to the "Test Platform" and click on <strong>Visualize</strong>.</p>
+<p>Now to visualise how the sensors and cameras would be attached to the platform, head to the <strong>Test Platform</strong> and click on <strong>Visualize</strong>.</p>
 <h2 id="limulate">Limulate<a class="headerlink" href="#limulate" title="Permanent link">&para;</a></h2>
 <p>Press <strong>Limulate</strong> to start the simulation. This is where the magic happens.</p>
 <p>The remaining part is straightforward. A laser ray is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
