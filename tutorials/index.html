@@ -734,7 +734,7 @@ Refer to the image below.</li>
 <p>Now to visualise how the sensors and cameras would be attached to the platform, head to the <strong>Test Platform</strong> and click on <strong>Visualize</strong>.</p>
 <h2 id="limulate">Limulate<a class="headerlink" href="#limulate" title="Permanent link">&para;</a></h2>
 <p>Press <strong>Limulate</strong> to start the simulation. This is where the magic happens.</p>
-<p>The remaining part is straightforward. A laser ray is created at each frame for every sensor, and intersection with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
+<p>The remaining part is straightforward. A laser ray is created at each frame for every channel of the sensor. Intersection of these laser rays with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
 <p>A csv file is created at the directory you specified earlier, you can visualize the output in Cloud Compare software.</p>
 
 
