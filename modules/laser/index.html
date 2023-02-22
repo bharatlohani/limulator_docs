@@ -513,6 +513,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#Modules.laser.laser_sensor.introduce_error" class="md-nav__link">
+    introduce_error()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#Modules.laser.laser_sensor.laser_object_group_frame_range_iterator" class="md-nav__link">
     laser_object_group_frame_range_iterator()
   </a>
@@ -1543,6 +1550,109 @@ Calls model accuracy which creates error models for <code>range</code>, <code>in
 
 
 
+<h4 id="Modules.laser.laser_sensor.introduce_error" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">introduce_error</span><span class="p">(</span><span class="n">ray_origin</span><span class="p">,</span> <span class="n">incident_ray</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="nb">range</span><span class="p">,</span> <span class="n">incidence_angle</span><span class="p">)</span></code>
+
+<a href="#Modules.laser.laser_sensor.introduce_error" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Recalculates the location of point of intersection after introducing 
+* fixed errors
+* range errors
+* incidence angle errors</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ray_origin</code></td>
+          <td>
+                <code>bpy.<span title="bpy.context">context</span>.<span title="bpy.context.scene">scene</span>.<span title="bpy.context.scene.objects">objects</span></code>
+          </td>
+          <td><p>ray origin</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>incident_ray</code></td>
+          <td>
+                <code>bpy.<span title="bpy.context">context</span>.<span title="bpy.context.scene">scene</span>.<span title="bpy.context.scene.objects">objects</span></code>
+          </td>
+          <td><p>incident ray</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>location</code></td>
+          <td>
+                <code>list</code>
+          </td>
+          <td><p>location</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>range</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>range</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>incidence_angle</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>incidence angle</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>tuple</code>
+          </td>
+          <td><p>New x, y, z locations</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h4 id="Modules.laser.laser_sensor.laser_object_group_frame_range_iterator" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">laser_object_group_frame_range_iterator</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">laserline_id</span><span class="p">)</span></code>
 
@@ -1606,7 +1716,7 @@ Calls model accuracy which creates error models for <code>range</code>, <code>in
 
 
 <h4 id="Modules.laser.laser_sensor.laserline_currentframe_interaction" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">laserline_currentframe_interaction</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">selected_laserline_id</span><span class="p">,</span> <span class="n">graph</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">laserline_currentframe_interaction</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">selected_laserline_id</span><span class="p">)</span></code>
 
 <a href="#Modules.laser.laser_sensor.laserline_currentframe_interaction" class="headerlink" title="Permanent link">&para;</a></h4>
 
