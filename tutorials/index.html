@@ -173,8 +173,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../startup/" class="md-tabs__link">
-      Getting Started
+    <a href="../about/" class="md-tabs__link">
+      About Limulator
     </a>
   </li>
 
@@ -185,8 +185,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../about/" class="md-tabs__link">
-      About Limulator
+    <a href="../startup/" class="md-tabs__link">
+      Getting Started
     </a>
   </li>
 
@@ -283,8 +283,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../startup/" class="md-nav__link">
-        Getting Started
+      <a href="../about/" class="md-nav__link">
+        About Limulator
       </a>
     </li>
   
@@ -298,8 +298,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        About Limulator
+      <a href="../startup/" class="md-nav__link">
+        Getting Started
       </a>
     </li>
   
@@ -356,75 +356,6 @@
         <li class="md-nav__item">
   <a href="#platform-and-sensor-setup" class="md-nav__link">
     Platform and Sensor Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Platform and Sensor Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prepare-scene-collection" class="md-nav__link">
-    Prepare Scene Collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-platform-object" class="md-nav__link">
-    Create a platform object
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-script-to-initialize-limulator-plugin" class="md-nav__link">
-    Run script to initialize Limulator plugin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-new-platform" class="md-nav__link">
-    Creating a new platform
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-platform-parameters" class="md-nav__link">
-    Set platform parameters:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-sensors" class="md-nav__link">
-    Setup Sensors
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-cameras" class="md-nav__link">
-    Setup Cameras
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-platform" class="md-nav__link">
-    Test Platform
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limulate" class="md-nav__link">
-    Limulate
   </a>
   
 </li>
@@ -581,75 +512,6 @@
     Platform and Sensor Setup
   </a>
   
-    <nav class="md-nav" aria-label="Platform and Sensor Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prepare-scene-collection" class="md-nav__link">
-    Prepare Scene Collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-platform-object" class="md-nav__link">
-    Create a platform object
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-script-to-initialize-limulator-plugin" class="md-nav__link">
-    Run script to initialize Limulator plugin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-new-platform" class="md-nav__link">
-    Creating a new platform
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-platform-parameters" class="md-nav__link">
-    Set platform parameters:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-sensors" class="md-nav__link">
-    Setup Sensors
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-cameras" class="md-nav__link">
-    Setup Cameras
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-platform" class="md-nav__link">
-    Test Platform
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limulate" class="md-nav__link">
-    Limulate
-  </a>
-  
 </li>
       
     </ul>
@@ -668,101 +530,8 @@
 
 
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<h2 id="scene-generation-with-esri-city-engine-and-blender">Scene Generation with Esri City Engine and Blender<a class="headerlink" href="#scene-generation-with-esri-city-engine-and-blender" title="Permanent link">&para;</a></h2>
-<p>Using available pre-built 3D elements and other GIS layers generate a static 3D model and export it as a <strong>.blend</strong> file. After this open the .blend file and add dynamism to the 3d elements.</p>
-<h2 id="platform-and-sensor-setup">Platform and Sensor Setup<a class="headerlink" href="#platform-and-sensor-setup" title="Permanent link">&para;</a></h2>
-<p>Now that the scene is generated, the next step is to create a platform with the desired sensors and cameras. For that we must specify platform objects and what trajectory they would follow. Platform objects are the parent objects where sensors are embedded, e.g. vehicles, drones, etc for scanning purposes. It could be a static object (with no trajectory) or a dynamic object with a trajectory imported from outside, or an actor(a dynamic object inside the scene). First things first a  platform object with a trajectory is to be created.</p>
-<p>Perform the following steps to create a platform object :</p>
-<h3 id="prepare-scene-collection">Prepare Scene Collection<a class="headerlink" href="#prepare-scene-collection" title="Permanent link">&para;</a></h3>
-<p>Once you are on the home screen of the blender rename the collection as <strong>Input</strong> and remove the camera and light hierarchy from it. Add a new collection to root i.e scene collection and name it <strong>Sensor</strong>.</p>
-<p>The panel should look like this:</p>
-<p><img alt="Collections" src="../content/collection_panel.png" /></p>
-<details class="warning">
-<summary>Collection name is case-sensitive. Make sure your collections name starts with a capital letter, otherwise you’ll encounter a logical error during script execution.</summary>
-</details>
-<h3 id="create-a-platform-object">Create a platform object<a class="headerlink" href="#create-a-platform-object" title="Permanent link">&para;</a></h3>
-<p>Platform objects can be controlled by either of 2 ways: </p>
-<ol>
-<li>External trajectories</li>
-<li>Keyframing in Blender </li>
-</ol>
-<p>For this tutorial we will create a platform object through keyframing: </p>
-<details class="info">
-<summary>More Information on use of external trajectories</summary>
-<p><a href="/docs/tutorials_2.md">Guide: Using external trajectories</a></p>
-</details>
-<ol>
-<li>Create a new empty object. Go to Add &gt; Empty &gt; Plain axis</li>
-</ol>
-<p><img alt="add empty object" src="../content/empty_object.png" /></p>
-<ol>
-<li>Create a new collection inside <strong>Input</strong> collection and rename it to <strong>Cars</strong></li>
-<li>Move the empty object into <strong>Cars</strong> collection </li>
-</ol>
-<p>Now if needed we can add some dynamic movement to the platform. This step consists of keyframing which adds motion to the empty object by providing location and orientation values. Lift the editor above to see the timeline and editor controls.</p>
-<details class="info">
-<summary>For more information about keyframing and frame rates:</summary>
-<ol>
-<li><a href="https://docs.blender.org/manual/en/latest/animation/keyframes/introduction.html#:~:text=The%20purpose%20of%20a%20Keyframe%20is%20to%20allow,chosen%20interpolation%20method%20%28e.g.%20Linear%2C%20B%C3%A9zier%2C%20Quadratic%2C%20etc.%29.">Keyframing in Blender</a></li>
-<li><a href="/docs/tutorials_2.md">Guide: How to calculate correct frame rate for a sensor</a></li>
-</ol>
-</details>
-<h3 id="run-script-to-initialize-limulator-plugin">Run script to initialize Limulator plugin<a class="headerlink" href="#run-script-to-initialize-limulator-plugin" title="Permanent link">&para;</a></h3>
-<p>Click on the scripting window, click on open, and go to the directory which has your source code saved i.e <strong>main2.py</strong> open it, and press <strong>run</strong>. </p>
-<details class="info">
-<summary>Additionally, you can also see the progress of the script in the system console. This is an optional step.</summary>
-<p>To open the system console, Go to windows &gt; toggle system console, this will open a new window of the system console.
-<img alt="console" src="../content/system_console.png" /></p>
-</details>
-<p>Now that your script is running go back to the layout page and click on the arrow situated near the viewpoint arrows (x,y, and z direction arrows). You will notice vertical options such as <strong>Tool</strong>, <strong>View</strong>, and <strong>Limulator</strong>. </p>
-<p>Here you would see three options under limulator dropdown</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Blender Scene options</strong>: This gives option to check and create label IDs for each class of objects in the scene. </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Create Platform</strong>: This lets us create a platform and setup sensors and cameras. Along with this it lets to test and run the simulations.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Bulk JSON Process</strong>: This option lets us to run multiple simulataneous simualations at a time.</li>
-</ul>
-<p><img alt="Startup Options" src="../content/limulator_startup_options.png" /></p>
-<h3 id="creating-a-new-platform">Creating a new platform<a class="headerlink" href="#creating-a-new-platform" title="Permanent link">&para;</a></h3>
-<p>Head to <strong>Create platform</strong> and open the dropdown menu click on <strong>Create new platform</strong>, and a new pop-up will show up refer to the image below:.</p>
-<p><img alt="An image of the design platform pop-up in the “create platform”" src="../content/create_platform.png" /></p>
-<p>For this tutorial we will add one sensor and one camera.
-Proceed by adding path to the directory output field, this is important as the JSON file and simulation results will be stored in the specified directory. </p>
-<p>Once the directory is specified click on <strong>Ok</strong>. Below new fields will be added to the <strong>Create platform</strong> dropdown </p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Platform</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Sensors</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Test Platform</li>
-</ul>
-<h3 id="set-platform-parameters">Set platform parameters:<a class="headerlink" href="#set-platform-parameters" title="Permanent link">&para;</a></h3>
-<p>Now click on <strong>platform</strong> from the dropdown, and click on <strong>platform parameters</strong>. This will lead to yet another pop-up.</p>
-<ol>
-<li>Enter the base orientation value of the platform with respect to the empty platform object.</li>
-<li>Go to the movement source and select <strong>Blender Object</strong> and select the empty platform object created before.</li>
-<li>Add values to render start as 0 and render end as 160 and click <strong>Ok</strong>.
-Refer to the image below.</li>
-</ol>
-<p><img alt="Platforms parameter pop-up" src="../content/platform_parameters.png" /></p>
-<h3 id="setup-sensors">Setup Sensors<a class="headerlink" href="#setup-sensors" title="Permanent link">&para;</a></h3>
-<p>Now since the platform is ready, its time to setup a LiDAR sensor. Under <strong>Sensor</strong> dropdown option with the camera ID (1 in current case) is displayed (for example in case of 2 sensors, two options - 1, 2 would be displayed). Clicking the option would display a window to enter sensor parameters.</p>
-<p><img alt="Sensor parameter pop-up" src="../content/sensor_parameters.png" /></p>
-<p>Here, provide location (x, y, z) and orientation (omega, phi, kappa) with respect to the platform object. Remaining parameters like PRF, Scanning frequency, Channels, etc., are specific to each LiDAR sensor and be referred from their data sheets.</p>
-<details class="info">
-<summary>For more information about sensor parameters:</summary>
-<p><a href="/docs/tutorials_2.md">Guide: Understanding sensor parameters</a></p>
-</details>
-<details class="warning">
-<summary>Make sure you click <strong>Ok</strong> after filling all the fields.</summary>
-<p>Please ensure that <strong>Ok</strong> is clicked on every opened pop-up window. Closing one pop-up window hides other windows as well, thus we may have to open them again and click <strong>Ok</strong> to proceed.</p>
-</details>
-<h3 id="setup-cameras">Setup Cameras<a class="headerlink" href="#setup-cameras" title="Permanent link">&para;</a></h3>
-<p>Configuring a camera sensor is similar to setting up a lidar sensor with camera-specific parameters like focal length, iso, etc.</p>
-<p><img alt="Camera parameter pop-up" src="../content/camera_parameters.png" /></p>
-<h3 id="test-platform">Test Platform<a class="headerlink" href="#test-platform" title="Permanent link">&para;</a></h3>
-<p>Now to visualise how the sensors and cameras would be attached to the platform, head to the <strong>Test Platform</strong> and click on <strong>Visualize</strong>.</p>
-<h2 id="limulate">Limulate<a class="headerlink" href="#limulate" title="Permanent link">&para;</a></h2>
-<p>Press <strong>Limulate</strong> to start the simulation. This is where the magic happens.</p>
-<p>The remaining part is straightforward. A laser ray is created at each frame for every channel of the sensor. Intersection of these laser rays with model objects is computed using ray casting. If the calculated distance exceeds the sensor max range, it is discarded; otherwise, we label the attribute and store the location of the intersection point in our point cloud.</p>
-<p>A csv file is created at the directory you specified earlier, you can visualize the output in <strong>Cloud Compare</strong> software.</p>
+<h2 id="scene-generation-with-esri-city-engine-and-blender"><a href="/docs/tutorials/scene_generation.md">Scene Generation with Esri City Engine and Blender</a><a class="headerlink" href="#scene-generation-with-esri-city-engine-and-blender" title="Permanent link">&para;</a></h2>
+<h2 id="platform-and-sensor-setup"><a href="/docs/tutorials/platform_sensor_setup.md">Platform and Sensor Setup</a><a class="headerlink" href="#platform-and-sensor-setup" title="Permanent link">&para;</a></h2>
 
 
 
@@ -792,7 +561,7 @@ Refer to the image below.</li>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About Limulator" rel="prev">
+        <a href="../startup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -801,7 +570,7 @@ Refer to the image below.</li>
               <span class="md-footer__direction">
                 Previous
               </span>
-              About Limulator
+              Getting Started
             </div>
           </div>
         </a>

@@ -90,4 +90,14 @@
          <lastmod>2023-03-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://bharatlohani.github.io/limulator_docs/tutorials/platform_sensor_setup/</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bharatlohani.github.io/limulator_docs/tutorials/scene_generation/</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>

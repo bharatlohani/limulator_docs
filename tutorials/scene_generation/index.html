@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bharatlohani.github.io/limulator_docs/modules/camera/">
+        <link rel="canonical" href="https://bharatlohani.github.io/limulator_docs/tutorials/scene_generation/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Camera - Limulator</title>
+        <title>Tutorials - Limulator</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#camera-module" class="md-skip">
+        <a href="#scene-generation-with-esri-city-engine-and-blender" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Camera
+              Tutorials
             
           </span>
         </div>
@@ -197,7 +197,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../tutorials/" class="md-tabs__link">
+    <a href="../" class="md-tabs__link">
       Tutorials
     </a>
   </li>
@@ -236,7 +236,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -309,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Tutorials
       </a>
     </li>
@@ -428,6 +430,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -437,8 +441,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -447,49 +449,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Modules.camera" class="md-nav__link">
-    camera
+  <a href="#scene-generation-with-esri-city-engine-and-blender" class="md-nav__link">
+    Scene Generation with Esri City Engine and Blender
   </a>
-  
-    <nav class="md-nav" aria-label="camera">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Modules.camera.camera" class="md-nav__link">
-    camera
-  </a>
-  
-    <nav class="md-nav" aria-label="camera">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#Modules.camera.camera.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Modules.camera.camera.create_camera" class="md-nav__link">
-    create_camera()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#Modules.camera.camera.render_frames" class="md-nav__link">
-    render_frames()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -508,198 +470,14 @@
                   
 
 
-<h1 id="camera-module">Camera Module<a class="headerlink" href="#camera-module" title="Permanent link">&para;</a></h1>
+  <h1>Tutorials</h1>
 
-
-<div class="doc doc-object doc-module">
-
-
-
-<h2 id="Modules.camera" class="doc doc-heading">
-          <code>Modules.camera</code>
-
-
-<a href="#Modules.camera" class="headerlink" title="Permanent link">&para;</a></h2>
-
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h3 id="Modules.camera.camera" class="doc doc-heading">
-        <code>camera</code>
-
-
-<a href="#Modules.camera.camera" class="headerlink" title="Permanent link">&para;</a></h3>
-
-
-  <div class="doc doc-contents ">
-
-  
-      <p>Camera class. It lets create and render images based on the camera paeameters</p>
-
-  <p><strong>Attributes:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>camera_data</code></td>
-          <td>
-                <code>json</code>
-          </td>
-          <td><p>camera data</p></td>
-        </tr>
-    </tbody>
-  </table>
+<h2 id="scene-generation-with-esri-city-engine-and-blender">Scene Generation with Esri City Engine and Blender<a class="headerlink" href="#scene-generation-with-esri-city-engine-and-blender" title="Permanent link">&para;</a></h2>
+<p>Using available pre-built 3D elements and other GIS layers generate a static 3D model and export it as a <strong>.blend</strong> file. After this open the .blend file and add dynamism to the 3d elements.</p>
 
 
 
   
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h4 id="Modules.camera.camera.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">camera_data</span><span class="p">,</span> <span class="n">platform_data</span><span class="p">,</span> <span class="n">sensor_data</span><span class="p">)</span></code>
-
-<a href="#Modules.camera.camera.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Initialize a Camera class. Get all camera parameters</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>camera_data</code></td>
-          <td>
-                <code>json</code>
-          </td>
-          <td><p>camera data</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>platform_data</code></td>
-          <td>
-                <code>json</code>
-          </td>
-          <td><p>Platform data</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>sensor_data</code></td>
-          <td>
-                <code>json</code>
-          </td>
-          <td><p>Sensor Data</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h4 id="Modules.camera.camera.create_camera" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">create_camera</span><span class="p">()</span></code>
-
-<a href="#Modules.camera.camera.create_camera" class="headerlink" title="Permanent link">&para;</a></h4>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Creates a blender camera object inside empty camera object</p>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h4 id="Modules.camera.camera.render_frames" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">render_frames</span><span class="p">()</span></code>
-
-<a href="#Modules.camera.camera.render_frames" class="headerlink" title="Permanent link">&para;</a></h4>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Renders frames for the full scene with the selected camera</p>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
 
 
 
