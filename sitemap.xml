@@ -91,6 +91,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bharatlohani.github.io/limulator_docs/tutorials/animation_scaling/</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bharatlohani.github.io/limulator_docs/tutorials/frame_rate_calculation/</loc>
+         <lastmod>2023-03-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bharatlohani.github.io/limulator_docs/tutorials/platform_sensor_setup/</loc>
          <lastmod>2023-03-01</lastmod>
          <changefreq>daily</changefreq>
