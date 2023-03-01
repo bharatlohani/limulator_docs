@@ -238,7 +238,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -334,20 +336,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limulator" class="md-nav__link">
-    Limulator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#why-limulator" class="md-nav__link">
     Why Limulator?
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limulator-components" class="md-nav__link">
     Limulator Components
   </a>
@@ -366,11 +366,6 @@
   <a href="#trajectory-module" class="md-nav__link">
     Trajectory Module
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -514,6 +509,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -539,20 +536,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limulator" class="md-nav__link">
-    Limulator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#why-limulator" class="md-nav__link">
     Why Limulator?
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limulator-components" class="md-nav__link">
     Limulator Components
   </a>
@@ -571,11 +566,6 @@
   <a href="#trajectory-module" class="md-nav__link">
     Trajectory Module
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -602,7 +592,6 @@
   <h1>About Limulator</h1>
 
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<h3 id="limulator">Limulator<a class="headerlink" href="#limulator" title="Permanent link">&para;</a></h3>
 <p>Lidar technology has been widely used to build 3D surface models. It can use several sensors available to generate user-required data,  needless to say, it is both time-consuming and expensive. </p>
 <p>Limulator is a wake of a new technology tool that builds realistic 3D surface models by simulation. Limulator stands for the combination of the words <strong>LiDAR</strong> and <strong>simulator</strong> thus becoming Limulator. Limulator has been developed as a generic solution for numerous simulation tasks, including autonomous driving systems, airborne altimetry, and others.
 This software combines the models or mathematical equations to replicate the process of  LiDAR data generation. Majorly it works on three components: 3D model component, laser component, and LiDAR data generation.</p>
@@ -621,9 +610,7 @@ Some of the challenges faced are :</p>
 <li>The lack of real-world diversity can be filled by simulation i.e content gap.The simulated data depicts the real-world characteristics which can overcome the appearance gap.</li>
 </ul>
 <p>The focus of the limulator :</p>
-<div class="highlight"><pre><span></span><code>                     (Flow chart with 2 levels)
-                      Reference 5th slide PPT
-</code></pre></div>
+<p><img alt="Our Focus" src="../content/focus.png" /></p>
 <p>Previous contribution of limulator since 2007:</p>
 <ul>
 <li>Few publications such as Airborne Altimetric LiDAR.</li>
@@ -631,7 +618,7 @@ Some of the challenges faced are :</p>
 <li>Thousands of data download from limulator for educational and aerial platforms.</li>
 <li>Chandrayan LLRI simulation - Return waveform and point cloud simulation.</li>
 </ul>
-<h3 id="limulator-components">Limulator Components<a class="headerlink" href="#limulator-components" title="Permanent link">&para;</a></h3>
+<h2 id="limulator-components">Limulator Components<a class="headerlink" href="#limulator-components" title="Permanent link">&para;</a></h2>
 <p>There are four major components of a limulator:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Terrain component  </li>
@@ -641,7 +628,7 @@ Some of the challenges faced are :</p>
 </ul>
 <p><img alt="limulator components" src="../content/limulator_components.png" /></p>
 <p>The terrain Component involves the formation of 3D static terrain imagery that resembles a real scene. The imagery includes great detailing which enables the possibility of scenario generation. The trajectory component on the other hand is responsible for adding dynamism to the static imagery. This is achieved by considering the acceleration and attitude change of moving objects. The platform component takes user input to narrow down the requirements such as platform type (mobile, stationary, ground-based, aerial), placement of the sensor on the platform, sensor type, orientation, trajectory, and so on. The sensor component emphasizes the type of the sensor i.e LiDAR or camera and takes input on sensor characteristics such as position, orientation, PRF, scan range, FOV, etc.</p>
-<h4 id="terrain-module">Terrain module<a class="headerlink" href="#terrain-module" title="Permanent link">&para;</a></h4>
+<h3 id="terrain-module">Terrain module<a class="headerlink" href="#terrain-module" title="Permanent link">&para;</a></h3>
 <p>The terrain module consists creation of static objects. It has sub-components which include the creation of 3D assets, GIS layer, and DEM.</p>
 <p><img alt="Terrain Module" src="../content/terrain_module.png" /></p>
 <p>Step 1 - Analysis and quantification of the scene
@@ -656,13 +643,15 @@ A mesh file is created in this step, is created as follows -
  - Adjusting attributes to create more variations of 3D objects
  - Mapping and applying textures
  - A triangulated mesh file is generated and it is exported in .obj file format</p>
-<h4 id="trajectory-module">Trajectory Module<a class="headerlink" href="#trajectory-module" title="Permanent link">&para;</a></h4>
+<h3 id="trajectory-module">Trajectory Module<a class="headerlink" href="#trajectory-module" title="Permanent link">&para;</a></h3>
 <p>Here we will add dynamism to the static objects created in the previous step.
 Three ways to apply dynamism are behavior modeling + trajectory, Nurbs path (blender), and Behavior modeling (blender). </p>
 <div class="highlight"><pre><span></span><code>                                 The image on the slide 13 PPT
 </code></pre></div>
 
 
+
+  
 
 
 
@@ -682,6 +671,8 @@ Three ways to apply dynamism are behavior modeling + trajectory, Nurbs path (ble
       
         <footer class="md-footer">
   
+    
+      
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
