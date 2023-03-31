@@ -425,19 +425,23 @@
 
   <h1>Using external trajectories for sensors</h1>
 
-<p>The movement of platform object can also be set up using an external trajectory file. The trajectory is a set of comma separated values of the below values:
-* Location x: X coordinate of the position of platform at time instant t
-* Location y: Y coordinate of the position of platform at time instant t
-* Location z: Z coordinate of the position of platform at time instant t
-* Orientation omega: Rotation about X axis at time instant t
-* Orientation phi: Rotation about Y axis at time instant t
-* Orientation kappa: Rotation about Z axis at time instant t
-* time instance (t): Time calculated from the start of simulation.</p>
+<p>The movement of platform object can also be set up using an external trajectory file. The trajectory is a set of comma separated values of the below values:</p>
+<ul>
+<li>Location x: X coordinate of the position of platform at time instant t</li>
+<li>Location y: Y coordinate of the position of platform at time instant t</li>
+<li>Location z: Z coordinate of the position of platform at time instant t</li>
+<li>Orientation omega: Rotation about X axis at time instant t</li>
+<li>Orientation phi: Rotation about Y axis at time instant t</li>
+<li>Orientation kappa: Rotation about Z axis at time instant t</li>
+<li>time instance (t): Time calculated from the start of simulation.</li>
+</ul>
 <p>The above values must be provided for each time instance at which the laser pulses are being sent out. If comparing to the blender animation the values must be provided for each frame.</p>
 <p>These values can be caluclated through the Trajectory_for_Lidar3d.py script. We need to provide below parameters in a json file for it:</p>
 <ol>
 <li>a list of Waypoints: Point at which the platform should pass through at any given time instance</li>
-<li>Platform_dynamics:<ul>
+<li>
+<p>Platform_dynamics:</p>
+<ul>
 <li>velocity</li>
 <li>Deviation in Acceleration</li>
 <li>Attitude_deviation in terms of values of roll, pitch, yaw</li>
