@@ -15,7 +15,7 @@
     
     
       
-        <title>External traj - Limulator</title>
+        <title>Using external trajectories for sensors - Limulator</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              External traj
+              Using external trajectories for sensors
             
           </span>
         </div>
@@ -219,7 +219,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -396,6 +398,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -419,11 +423,31 @@
                   
 
 
-  <h1>External traj</h1>
+  <h1>Using external trajectories for sensors</h1>
+
+<p>The movement of platform object can also be set up using an external trajectory file. The trajectory is a set of comma separated values of the below values:
+* Location x: X coordinate of the position of platform at time instant t
+* Location y: Y coordinate of the position of platform at time instant t
+* Location z: Z coordinate of the position of platform at time instant t
+* Orientation omega: Rotation about X axis at time instant t
+* Orientation phi: Rotation about Y axis at time instant t
+* Orientation kappa: Rotation about Z axis at time instant t
+* time instance (t): Time calculated from the start of simulation.</p>
+<p>The above values must be provided for each time instance at which the laser pulses are being sent out. If comparing to the blender animation the values must be provided for each frame.</p>
+<p>These values can be caluclated through the Trajectory_for_Lidar3d.py script. We need to provide below parameters in a json file for it:</p>
+<ol>
+<li>a list of Waypoints: Point at which the platform should pass through at any given time instance</li>
+<li>Platform_dynamics:<ul>
+<li>velocity</li>
+<li>Deviation in Acceleration</li>
+<li>Attitude_deviation in terms of values of roll, pitch, yaw</li>
+</ul>
+</li>
+</ol>
 
 
 
-
+  
 
 
 
