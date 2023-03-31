@@ -198,24 +198,12 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../tutorials/" class="md-tabs__link">
-      Tutorials
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
   
   
   
     <li class="md-tabs__item">
       <a href="../references/" class="md-tabs__link">
-        References
+        Tutorials
       </a>
     </li>
   
@@ -420,39 +408,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../tutorials/" class="md-nav__link">
-        Tutorials
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
-          References
+        <label class="md-nav__link" for="__nav_4">
+          Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="References" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          References
+          Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -463,7 +436,7 @@
   
     <li class="md-nav__item">
       <a href="../references/" class="md-nav__link">
-        References
+        Tutorials
       </a>
     </li>
   
@@ -687,51 +660,56 @@
 <p>Lastly, you need to install the python extension by Microsoft for visual code studio.</p>
 <h2 id="first-run">First Run<a class="headerlink" href="#first-run" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open Blender and open desired .blend file. Go to File &gt; Open &gt; Locate Blender file and click Open</li>
-</ol>
+<li>
+<p>Open Blender and open desired .blend file. Go to File &gt; Open &gt; Locate Blender file and click Open</p>
 <p><img alt="Step 1" src="../content/stp1.png" /></p>
-<ol>
-<li>Now we need to run the script file to initiate Limulator addon. For that switch to scripting and goto Text &gt; Open. Locate main2.py file and click Open Text.</li>
-</ol>
-<p><img alt="Step 2a" src="../content/stp2.png" /></p>
-<p><img alt="Step 2b" src="../content/stp2b.png" /></p>
-<ol>
-<li>Now edit the main2.py file and change the path</li>
-</ol>
-<p><img alt="Step 3" src="../content/stp3.png" /></p>
-<ol>
-<li>Run the main2.py file.</li>
-</ol>
-<p><img alt="Step 4" src="../content/stp4.png" /></p>
 <details class="info">
 <summary>If the model is displayed in pink instead of textures.</summary>
-<p>This occurs because blender could not find the texture files. For resolving this we need to provide appropriate location where all texture files are present.
-1. Goto File &gt; External Data &gt; Find Missing File
-2. Locate the folder where all texture files are present and click Find Missing Files</p>
-<p><img alt="Step 5" src="../content/stp5.png" /></p>
-<p><img alt="Step 6" src="../content/stp6.png" />    </p>
-</details>
+<p>This occurs because blender could not find the texture files. For resolving this we need to provide appropriate location where all texture files are present.</p>
 <ol>
+<li>Goto File &gt; External Data &gt; Find Missing File</li>
+<li>Locate the folder where all texture files are present and click Find Missing Files
+<img alt="Step 5" src="../content/stp5.png" />
+<img alt="Step 6" src="../content/stp6.png" />   </li>
+</ol>
+</details>
+</li>
 <li>
-<p>Switch to Layout window, here the model would be displayed in pink instead of displayed will not display the textures Go to Layout -&gt; File -&gt; External Data -&gt; Find Missing File</p>
+<p>Now we need to run the script file to initiate Limulator addon. For that switch to scripting and goto Text &gt; Open. Locate main2.py file and click Open Text.</p>
+<p><img alt="Step 2a" src="../content/stp2.png" /></p>
+<p><img alt="Step 2b" src="../content/stp2b.png" /></p>
+</li>
+<li>
+<p>We can see the progress of the script in the system console. Open the system console, Go to windows &gt; toggle system console, this will open a new window of the system console.
+    <img alt="console" src="./../content/system_console.png" /></p>
+</li>
+<li>
+<p>Now edit the main2.py file and change the path to the location where all modules are present</p>
+<p><img alt="Step 3" src="../content/stp3.png" /></p>
+</li>
+<li>
+<p>Run the main2.py file.</p>
+<p><a href="stp4.png"><img src ="../content/stp4.png" width = "225px"/></a></p>
 </li>
 <li>
 <p>On the side bar click on Limulator to display all options. Click </p>
+<p><a href="stp7.png"><img src ="../content/stp7.png" width = "250px"/></a></p>
 </li>
-</ol>
-<p><img alt="Step 7" src="../content/stp7.png" /></p>
-<ol>
-<li>Review platform and sensor parameters</li>
-</ol>
-<p><img alt="Step 8" src="./content/stp8.png" /></p>
-<p><img alt="Step 9" src="./content/stp9.png" /></p>
-<ol>
-<li>Select the platform in the side bar</li>
-<li>Go to View -&gt; Frame selected – to see the platform</li>
-<li>Click on Visualize to see the sensor</li>
-<li>Go to the sidebar -&gt; Select the desired Sensor </li>
-<li>Change the orientation of the sensor in the transform menu to set it to a suitable location. Copy and paste X, Y, Z values to position values under sensor parameters</li>
-<li>Click on Limulate to start the simulation</li>
+<li>
+<p>Click on Platform Parameters button and each sensor. Review the settings and click Ok</p>
+<p><img alt="Step 8" src="../content/stp8.png" /></p>
+</li>
+<li>
+<p>Click on Visualize to see the sensor</p>
+<p><a href="stp9.png"><img src ="../content/stp9.png" width = "225px"/></a></p>
+</li>
+<li>
+<p>Click on Limulate to start the simulation</p>
+<p><a href="stp10.png"><img src ="../content/stp10.png" width = "225px"/></a></p>
+</li>
+<li>
+<p>The simulation process is displayed on the console. Once the process is completed a csv file is created at "Sensor/sensor_name/". This csv file can be imported in cloud compare to visualize the simulated point cloud.</p>
+</li>
 </ol>
 
 
@@ -778,7 +756,7 @@
       
       
         
-        <a href="../tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials" rel="next">
+        <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
