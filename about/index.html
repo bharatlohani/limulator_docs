@@ -329,15 +329,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#terrain-module" class="md-nav__link">
-    Terrain module
+  <a href="#terrain-component" class="md-nav__link">
+    Terrain Component
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trajectory-module" class="md-nav__link">
-    Trajectory Module
+  <a href="#trajectory-component" class="md-nav__link">
+    Trajectory Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-component" class="md-nav__link">
+    Platform Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-component" class="md-nav__link">
+    Sensor Component
   </a>
   
 </li>
@@ -529,15 +543,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#terrain-module" class="md-nav__link">
-    Terrain module
+  <a href="#terrain-component" class="md-nav__link">
+    Terrain Component
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trajectory-module" class="md-nav__link">
-    Trajectory Module
+  <a href="#trajectory-component" class="md-nav__link">
+    Trajectory Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-component" class="md-nav__link">
+    Platform Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-component" class="md-nav__link">
+    Sensor Component
   </a>
   
 </li>
@@ -584,13 +612,15 @@ Some of the challenges faced are :</p>
 </ul>
 <p>The focus of the limulator :</p>
 <p><img alt="Our Focus" src="../content/focus.png" /></p>
-<p>Previous contribution of limulator since 2007:</p>
+<details class="info">
+<summary>Previous contribution of limulator since 2007:</summary>
 <ul>
 <li>Few publications such as Airborne Altimetric LiDAR.</li>
 <li>Won ISPRS awards</li>
 <li>Thousands of data download from limulator for educational and aerial platforms.</li>
 <li>Chandrayan LLRI simulation - Return waveform and point cloud simulation.</li>
 </ul>
+</details>
 <h2 id="limulator-components">Limulator Components<a class="headerlink" href="#limulator-components" title="Permanent link">&para;</a></h2>
 <p>There are three major components of a limulator:</p>
 <ul class="task-list">
@@ -599,27 +629,38 @@ Some of the challenges faced are :</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Sensor component</li>
 </ul>
 <p><img alt="limulator components" src="../content/limulator_components.png" /></p>
-<p>The terrain Component involves the formation of 3D static terrain imagery that resembles a real scene. The imagery includes great detailing which enables the possibility of scenario generation. The trajectory component on the other hand is responsible for adding dynamism to the static imagery. This is achieved by considering the acceleration and attitude change of moving objects. The platform component takes user input to narrow down the requirements such as platform type (mobile, stationary, ground-based, aerial), placement of the sensor on the platform, sensor type, orientation, trajectory, and so on. The sensor component emphasizes the type of the sensor i.e LiDAR or camera and takes input on sensor characteristics such as position, orientation, PRF, scan range, FOV, etc.</p>
-<h3 id="terrain-module">Terrain module<a class="headerlink" href="#terrain-module" title="Permanent link">&para;</a></h3>
-<p>The terrain module consists creation of static objects. It has sub-components which include the creation of 3D assets, GIS layer, and DEM.</p>
-<p><img alt="Terrain Module" src="../content/terrain_module.png" /></p>
-<p>Step 1 - Analysis and quantification of the scene
-An already existing scene is taken from dales data on which the size of terrain and surface structures are identified. The next procedure is to perform object quantification which involves class identification i.e car, building, traffic light, etc, and dimensions of the objects i.e height, width, etc.</p>
-<p>Step 2 - Data Preparation 
+<h3 id="terrain-component">Terrain Component<a class="headerlink" href="#terrain-component" title="Permanent link">&para;</a></h3>
+<p>The terrain Component involves the formation of 3D static terrain imagery that resembles a real scene. The imagery includes great detailing which enables the possibility of scenario generation.</p>
+<h3 id="trajectory-component">Trajectory Component<a class="headerlink" href="#trajectory-component" title="Permanent link">&para;</a></h3>
+<p>The trajectory component on the other hand is responsible for adding dynamism to the static imagery. This is achieved by considering the acceleration and attitude change of moving objects.</p>
+<h3 id="platform-component">Platform Component<a class="headerlink" href="#platform-component" title="Permanent link">&para;</a></h3>
+<p>The platform component takes user input to narrow down the requirements such as platform type (mobile, stationary, ground-based, aerial), placement of the sensor on the platform, sensor type, orientation, trajectory, and so on.</p>
+<h3 id="sensor-component">Sensor Component<a class="headerlink" href="#sensor-component" title="Permanent link">&para;</a></h3>
+<p>The sensor component emphasizes the type of the sensor i.e LiDAR or camera and takes input on sensor characteristics such as position, orientation, PRF, scan range, FOV, etc.</p>
+<!-- ### Terrain module
+The terrain module consists creation of static objects. It has sub-components which include the creation of 3D assets, GIS layer, and DEM.
+
+![Terrain Module](./content/terrain_module.png)
+
+Step 1 - Analysis and quantification of the scene
+An already existing scene is taken from dales data on which the size of terrain and surface structures are identified. The next procedure is to perform object quantification which involves class identification i.e car, building, traffic light, etc, and dimensions of the objects i.e height, width, etc.
+
+Step 2 - Data Preparation 
 Data prepared as follows -
  - Terrain heatmap and texture
  - The scene’s footprint and design are created in the file format OSM/ .shp/ Basemap data
- - Computer-generated architecture (CGA) rules file</p>
-<p>Step 3 - Modelling in CityEngine
+ - Computer-generated architecture (CGA) rules file
+
+Step 3 - Modelling in CityEngine
 A mesh file is created in this step, is created as follows - 
  - Adjusting attributes to create more variations of 3D objects
  - Mapping and applying textures
- - A triangulated mesh file is generated and it is exported in .obj file format</p>
-<h3 id="trajectory-module">Trajectory Module<a class="headerlink" href="#trajectory-module" title="Permanent link">&para;</a></h3>
-<p>Here we will add dynamism to the static objects created in the previous step.
-Three ways to apply dynamism are behavior modeling + trajectory, Nurbs path (blender), and Behavior modeling (blender). </p>
-<div class="highlight"><pre><span></span><code>                                 The image on the slide 13 PPT
-</code></pre></div>
+ - A triangulated mesh file is generated and it is exported in .obj file format
+### Trajectory Module 
+Here we will add dynamism to the static objects created in the previous step.
+Three ways to apply dynamism are behavior modeling + trajectory, Nurbs path (blender), and Behavior modeling (blender). 
+
+                                     The image on the slide 13 PPT -->
 
 
 
